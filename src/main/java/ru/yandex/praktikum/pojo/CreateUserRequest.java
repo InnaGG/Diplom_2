@@ -1,6 +1,6 @@
 package ru.yandex.praktikum.pojo;
 
-public class CreateUser {
+public class CreateUserRequest {
     private String email;
     private String password;
     private String name;

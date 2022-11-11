@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="ru.yandex.praktikum.user.CreateUserTest" time="1.203" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="ru.yandex.praktikum.orders.CreateOrderTest" time="3.931" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -62,7 +62,11 @@
     <property name="java.vendor.version" value="Corretto-11.0.16.9.1"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ru.yandex.praktikum.user.CreateUserTest" name="createUserWithMissingMandatoryEmailNegative" time="0.13"/>
-  <testcase classname="ru.yandex.praktikum.user.CreateUserTest" name="createUserThatWasAlreadyCreatedNegative" time="0.612"/>
-  <testcase classname="ru.yandex.praktikum.user.CreateUserTest" name="createUserPositive" time="0.461"/>
+  <testcase classname="ru.yandex.praktikum.orders.CreateOrderTest" name="createAnOrderWithoutIngredientsWithoutAuthorizationNegative" time="0.142"/>
+  <testcase classname="ru.yandex.praktikum.orders.CreateOrderTest" name="createAnOrderWithIncorrectIngredientIdsNegative" time="0.149"/>
+  <testcase classname="ru.yandex.praktikum.orders.CreateOrderTest" name="getOrdersOfUserWithoutAuthorizationNegative" time="0.297"/>
+  <testcase classname="ru.yandex.praktikum.orders.CreateOrderTest" name="getOrdersOfUserWithAuthorizationPositive" time="1.467"/>
+  <testcase classname="ru.yandex.praktikum.orders.CreateOrderTest" name="createAnOrderWithoutIngredientsWithAuthorizationNegative" time="0.608"/>
+  <testcase classname="ru.yandex.praktikum.orders.CreateOrderTest" name="createAnOrderWithAuthorisationPositive" time="1.11"/>
+  <testcase classname="ru.yandex.praktikum.orders.CreateOrderTest" name="createAnOrderWithoutAuthorisationPositive" time="0.158"/>
 </testsuite>
