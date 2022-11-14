@@ -1,5 +1,6 @@
 package ru.yandex.praktikum.client;
 
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import ru.yandex.praktikum.pojo.CreateUserRequest;
 import ru.yandex.praktikum.pojo.LoginUserRequest;
@@ -13,7 +14,7 @@ public class UserClient extends RestClient {
     private static final String CHANGE_USER = "/api/auth/user";
     private static final String DELETE_USER = "/api/auth/user";
 
-    // create user in system
+    @Step("Create User Request")
     public ValidatableResponse createUser(CreateUserRequest createUserRequest) {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -22,7 +23,7 @@ public class UserClient extends RestClient {
                 .then();
     }
 
-    // login user in system
+    @Step("Login User Request")
     public ValidatableResponse loginUser(LoginUserRequest loginUserRequest) {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -31,7 +32,7 @@ public class UserClient extends RestClient {
                 .then();
     }
 
-    // change user in system
+    @Step("Update User Request")
     public ValidatableResponse updateUser(UpdateUserRequest updateUserRequest, String accessToken) {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -41,6 +42,7 @@ public class UserClient extends RestClient {
                 .then();
     }
 
+    @Step("Delete User Request")
     public ValidatableResponse deleteUser(String accessToken) {
         return given()
                 .spec(getDefaultRequestSpec())
@@ -49,6 +51,7 @@ public class UserClient extends RestClient {
                 .then();
     }
 
+    @Step("Update User Without Authorization Negative Request")
     public ValidatableResponse updateUserWithoutAuthorizationNEGATIVE(UpdateUserRequest updateUserRequest) {
         return given()
                 .spec(getDefaultRequestSpec())

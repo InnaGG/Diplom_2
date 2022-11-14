@@ -1,12 +1,12 @@
 package ru.yandex.praktikum.user;
 
-import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
 import org.hamcrest.Matchers;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import ru.yandex.praktikum.TestSteps;
 import ru.yandex.praktikum.client.UserClient;
 import ru.yandex.praktikum.pojo.CreateUserRequest;
